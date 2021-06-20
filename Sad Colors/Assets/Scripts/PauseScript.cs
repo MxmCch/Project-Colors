@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Martin
 // Basic pause mechanic
@@ -55,11 +56,12 @@ public class PauseScript : MonoBehaviour
     public void QuitGame()
     {
         SaveGame();
-        Debug.Log("Quitting");
-        Application.Quit();
+        Debug.Log("Quitting to Main Menu");
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
 
-        // !!! IMPORTANT !!!
+        /*// !!! IMPORTANT !!!
         // REMOVE NEXT LINE BEFORE BUILDING
-        UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;*/
     }
 }

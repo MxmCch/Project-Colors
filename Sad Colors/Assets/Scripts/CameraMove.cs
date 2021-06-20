@@ -21,7 +21,7 @@ public class CameraMove : MonoBehaviour
         // Show cursor and disable camera movement when paused
         if (PauseScript.GameIsPaused)
         {
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.None;
         } else
         {
             if (Cursor.lockState != CursorLockMode.Locked)

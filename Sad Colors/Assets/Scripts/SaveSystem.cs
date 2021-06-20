@@ -34,4 +34,38 @@ public static class SaveSystem
             return null;
         }
     }
+
+    // Martin
+    // Saving settings data
+    public static void SaveSettings(Setting setting)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/settings.sc";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        SettingsData data = new SettingsData(setting);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public static SettingsData LoadSettings()
+    {
+        string path = Application.persistentDataPath + "/settings.sc";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            SettingsData data = formatter.Deserialize(stream) as SettingsData;
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.Log("Save file not found in " + path);
+            return null;
+        }
+    }
 }
