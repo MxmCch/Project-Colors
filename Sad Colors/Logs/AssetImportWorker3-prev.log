@@ -1,0 +1,159 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.9f1 (108be757e447) revision 1084391'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 8111 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Unity\2020.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+D:/Project-Colors/Sad Colors
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+56418
+Successfully changed project path to: D:/Project-Colors/Sad Colors
+D:/Project-Colors/Sad Colors
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 84.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.9f1 (108be757e447)
+[Subsystems] Discovering subsystems at path D:/Unity/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Project-Colors/Sad Colors/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
+    Vendor:   
+    VRAM:     4021 MB
+    Driver:   27.21.14.6140
+Initialize mono
+Mono path[0] = 'D:/Unity/2020.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56260
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2020.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002092 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 50.02 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.829 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002134 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.02 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.558 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.38 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1638 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.7 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2088.
+Total: 3.420000 ms (FindLiveObjects: 0.319900 ms CreateObjectMapping: 0.087800 ms MarkObjects: 2.880700 ms  DeleteObjects: 0.129400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Assets
+  artifactKey: Guid(bea8036a35d1de543aad47b38eba610c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets using Guid(bea8036a35d1de543aad47b38eba610c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8deb86f6706f6145411300a05f6a093b') in 0.059078 seconds
+  Import took 0.079848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000444 seconds.
+  path: Assets/Assets/wardrobe_kindergarden.blend
+  artifactKey: Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/wardrobe_kindergarden.blend using Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c7ecd97cbafa66c01aca43ba4123149') in 0.069694 seconds
+  Import took 0.098960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.652620 seconds.
+  path: Assets/Assets/wardrobe_kindergarden.fbx
+  artifactKey: Guid(226d435c21d40104fa369778ed3e8623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/wardrobe_kindergarden.fbx using Guid(226d435c21d40104fa369778ed3e8623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66dfe00568a8252a141ca74366466f05') in 0.516823 seconds
+  Import took 0.575934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.661097 seconds.
+  path: Assets/Assets/wardrobe_kindergarden.fbx
+  artifactKey: Guid(226d435c21d40104fa369778ed3e8623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/wardrobe_kindergarden.fbx using Guid(226d435c21d40104fa369778ed3e8623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68afc4d57701bdabfa19664c36c4a81c') in 0.044745 seconds
+  Import took 0.051831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.926630 seconds.
+  path: Assets/Assets/wardrobe_kindergarden.blend1
+  artifactKey: Guid(2c8a14c0ca9c0794cbf47807431ba00e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/wardrobe_kindergarden.blend1 using Guid(2c8a14c0ca9c0794cbf47807431ba00e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '859dbf5d3e6c5682498a4b245685ba9d') in 0.007039 seconds
+  Import took 0.140437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.837105 seconds.
+  path: Assets/Assets/wardrobe_kindergarden.blend
+  artifactKey: Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/wardrobe_kindergarden.blend using Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd745618b42694fe12a05ef6fb8624ed') in 0.003680 seconds
+  Import took 0.072838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.056210 seconds.
+  path: Assets/Assets/wardrobe_kindergarden.blend
+  artifactKey: Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/wardrobe_kindergarden.blend using Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e00d5924067c19bc9f4aa9307f4a76') in 0.002612 seconds
+  Import took 0.106674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 333.382489 seconds.
+  path: Assets/Shaders
+  artifactKey: Guid(a8668043cd33a5548a2c1975f3699618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders using Guid(a8668043cd33a5548a2c1975f3699618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de5af7ea305467444c63c5b314499e6e') in 0.016006 seconds
+  Import took 0.029161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.687723 seconds.
+  path: Assets/Shaders/Outline.shader
+  artifactKey: Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Outline.shader using Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '320751ab8a3f240d53dfd03f594bf3e1') in 0.018026 seconds
+  Import took 0.033526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004986 seconds.
+  path: Assets/Shaders/Outline.shader
+  artifactKey: Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Outline.shader using Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '320751ab8a3f240d53dfd03f594bf3e1') in 0.002789 seconds
+  Import took 0.029946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.742885 seconds.
+  path: Assets/Shaders/Outline.shader
+  artifactKey: Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Outline.shader using Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54fbac6eb62c3cff16e30209d56e316a') in 0.013002 seconds
+  Import took 0.046788 seconds .
+
