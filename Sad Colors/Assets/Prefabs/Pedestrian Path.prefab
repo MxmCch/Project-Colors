@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5881863171694925509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5881863171694925563}
+  - component: {fileID: 5881863171694925508}
+  m_Layer: 0
+  m_Name: Waypoint0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5881863171694925563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881863171694925509}
+  m_LocalRotation: {x: -0, y: 0.6654572, z: -0, w: 0.746436}
+  m_LocalPosition: {x: -3.4799998, y: 0, z: 3.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5881863172735179949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 83.435, z: 0}
+--- !u!114 &5881863171694925508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881863171694925509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ede71678e25ac4bbfeb6a076b9cdf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PreviousWaypoint: {fileID: 0}
+  _NextWaypoint: {fileID: 5881863171948728222}
+  width: 2.65
+--- !u!1 &5881863171948728223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5881863171948728221}
+  - component: {fileID: 5881863171948728222}
+  m_Layer: 0
+  m_Name: Waypoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5881863171948728221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881863171948728223}
+  m_LocalRotation: {x: -0, y: 0.37916404, z: -0, w: 0.92532957}
+  m_LocalPosition: {x: -7.8199997, y: 0, z: 1.71}
+  m_LocalScale: {x: 2.1399999, y: 1.54, z: 1.54}
+  m_Children: []
+  m_Father: {fileID: 5881863172735179949}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 44.564, z: 0}
+--- !u!114 &5881863171948728222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881863171948728223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ede71678e25ac4bbfeb6a076b9cdf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PreviousWaypoint: {fileID: 5881863171694925508}
+  _NextWaypoint: {fileID: 0}
+  width: 2.29
+--- !u!1 &5881863172735179950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5881863172735179949}
+  - component: {fileID: 5881863172735179948}
+  m_Layer: 0
+  m_Name: Pedestrian Path
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5881863172735179949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881863172735179950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.41, y: 1.71, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5881863171694925563}
+  - {fileID: 5881863171948728221}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5881863172735179948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881863172735179950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1bdb6e17b65a54ebce49edef841bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pedestrianPrefab: {fileID: 4662100396301180829, guid: 8ff2b9c8c7a38f941a5a76267b3cd623, type: 3}
+  pedestriansToSpawn: 0

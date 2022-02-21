@@ -5,82 +5,84 @@ using UnityEngine;
 public class PickUpObject : MonoBehaviour
 {
     public float pickUpRange = 5;
-    private GameObject heldObj;
+    public GameObject heldObj;
     public Transform holdParent;
-    public float moveForce = 250;
-    public Color oldColor;
+    public GameObject playerCollider;
+    public float moveForce = 300;
+    public Color _OldColor;
 
-    private void OnTriggerEnter(Collider other) {
+    public Transform oldParent;
+
+// ja nevim 
+    private void OnTriggerStay(Collider other) {
         if (other.tag == "Pickupable")
         {
-            oldColor = other.GetComponent<Renderer>().material.color;
-            Renderer colorComponent = other.GetComponent<Renderer>();
-            colorComponent.material.SetColor("_Color", Color.green);
-            colorComponent.material.EnableKeyword("_EMISSION");
-            colorComponent.material.SetColor("_EmissionColor", Color.green * 1.8f);
+            if (!Input.GetMouseButton(0))
+            {
+                heldObj = other.gameObject;
+            }
+            heldObj.GetComponent<ObjectOptions>().HighlightObject();
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.tag == "Pickupable")
         {
-            other.GetComponent<Renderer>().material.SetColor("_Color", oldColor);
-            other.GetComponent<Renderer>().material.SetColor("_EmissionColor", oldColor/ 1.8f);
-        }
-    }
-
-    void Update() {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (heldObj == null)
+            heldObj.GetComponent<ObjectOptions>().RemoveHighlightObject();
+            if (!Input.GetMouseButton(0))
             {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange) && hit.transform.tag == "Pickupable")
-                {
-                    PickupObject(hit.transform.gameObject);
-                    
-                }
-            }else{
-                DropObject();
+                heldObj = null;
             }
         }
-        if (heldObj != null)
+    }
+
+    private void Update() {
+        if (Input.GetMouseButton(0))
         {
-            MoveObject();
+            if (heldObj != null)
+            {
+                heldObj.GetComponent<ObjectOptions>().RemoveHighlightObject();
+                MoveObject();
+                PickupObject(heldObj);
+            }
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (heldObj != null)
+            {
+                DropObject();
+            }
+            heldObj = null;
         }
     }
 
-    void MoveObject()
+    private void MoveObject()
     {
-        if (Vector3.Distance(heldObj.transform.position, holdParent.position) > 0.1f)
+        if (Vector3.Distance(heldObj.transform.position, holdParent.position) > 0.05f)
         {
             Vector3 moveDirection = (holdParent.position - heldObj.transform.position);
             heldObj.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
         }
     }
 
-    void PickupObject(GameObject pickObj)
+    private void PickupObject(GameObject pickObj)
     {
-        if (pickObj.GetComponent<Rigidbody>())
-        {
-            pickObj.GetComponent<Renderer>().material.SetColor("_Color", oldColor);
-            pickObj.GetComponent<Renderer>().material.SetColor("_Emission", oldColor/1.8f);
-            Rigidbody objRig = pickObj.GetComponent<Rigidbody>();
-            objRig.useGravity = false;
-            objRig.drag = 20;
-
-            objRig.transform.parent = holdParent;
-            heldObj = pickObj;
-        }
+        Rigidbody objRig = pickObj.GetComponent<Rigidbody>();
+        objRig.useGravity = false;
+        objRig.drag = 18;
+        heldObj = pickObj;
+        pickObj.transform.parent = holdParent;
     }
 
-    void DropObject()
+    private void DropObject()
     {
+        heldObj.GetComponent<ObjectOptions>().RemoveHighlightObject();
+        heldObj.GetComponent<Collider>().enabled = true;
         Rigidbody heldRig = heldObj.GetComponent<Rigidbody>();
         heldRig.useGravity = true;
         heldRig.drag = 1;
 
-        heldRig.transform.parent = null;
+        heldObj.transform.parent = heldObj.GetComponent<ObjectOptions>().thisParent;
         heldObj = null;
     }
 }

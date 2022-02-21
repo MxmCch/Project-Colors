@@ -12,6 +12,7 @@ public class CameraMove : MonoBehaviour
 
     void Start()
     {
+        this.transform.GetChild(0).gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
