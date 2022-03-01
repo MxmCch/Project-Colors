@@ -25,7 +25,6 @@ public class ChoiceObject : MonoBehaviour
                     int CurrentStop = _Interact.currentStop;
                     _Interact.skipDialog = CurrentStop+1;
                     _Dialog.thisSkipDialog = CurrentStop+1;
-                    Debug.Log(item.name);
                     _Dialog._DialogArray[CurrentStop].finalAnswer = item.name; 
                     Destroy(item.gameObject, 2);
                     _Interact.decisionActive = false;

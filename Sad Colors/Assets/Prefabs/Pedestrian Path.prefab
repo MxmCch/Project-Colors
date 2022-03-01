@@ -137,5 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1bdb6e17b65a54ebce49edef841bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pedestrianPrefab: {fileID: 4662100396301180829, guid: 8ff2b9c8c7a38f941a5a76267b3cd623, type: 3}
+  pedestrianPrefab: {fileID: 8063365504499494494, guid: d8423aa980ed599458a290e56d1c05f7, type: 3}
   pedestriansToSpawn: 0

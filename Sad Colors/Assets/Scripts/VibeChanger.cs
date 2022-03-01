@@ -99,7 +99,6 @@ public class VibeChanger : MonoBehaviour
     {
         Color newColor = CombineColors(aColors);
         newColor.a = 1;
-        Debug.Log(newColor);
         grad = new Gradient();
         grad.SetKeys( new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f), new GradientColorKey(newColor, 0.8f), new GradientColorKey(Color.white, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.6f) , new GradientAlphaKey(1.0f, 0.8f), new GradientAlphaKey(0.0f, 1.0f)  } );
         col.color = grad;

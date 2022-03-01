@@ -611,13 +611,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2128061945}
     m_Modifications:
+    - target: {fileID: 2815707450404225361, guid: 5f4931cd86f05a84e88ec726a8f8c3bd, type: 3}
+      propertyPath: _DialogArray.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815707450404225361, guid: 5f4931cd86f05a84e88ec726a8f8c3bd, type: 3}
+      propertyPath: _DialogArray.Array.data[0].talkingPersonName
+      value: Premek
+      objectReference: {fileID: 0}
     - target: {fileID: 2815707450404225363, guid: 5f4931cd86f05a84e88ec726a8f8c3bd, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2815707450404225363, guid: 5f4931cd86f05a84e88ec726a8f8c3bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2815707450404225363, guid: 5f4931cd86f05a84e88ec726a8f8c3bd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -625,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2815707450404225363, guid: 5f4931cd86f05a84e88ec726a8f8c3bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.75
+      value: -9.1
       objectReference: {fileID: 0}
     - target: {fileID: 2815707450404225363, guid: 5f4931cd86f05a84e88ec726a8f8c3bd, type: 3}
       propertyPath: m_LocalRotation.w

@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 4183408668797133274}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1047,7 +1047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1584522325403814420, guid: 583303c5a5dff22458a1bf20d9a1dc38, type: 3}
       propertyPath: m_fontSize
-      value: 57.85
+      value: 57.3
       objectReference: {fileID: 0}
     - target: {fileID: 2112766414251844215, guid: 583303c5a5dff22458a1bf20d9a1dc38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

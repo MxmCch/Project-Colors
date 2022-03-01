@@ -16,7 +16,7 @@ public class CharacterNavigationController : MonoBehaviour
     private void Start()
     {
         isTalking = 1;
-        movementSpeed = Random.Range(2, 4);
+        movementSpeed = Random.Range(4, 8);
     }
 
     private void Update() 

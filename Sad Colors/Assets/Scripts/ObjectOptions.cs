@@ -10,7 +10,7 @@ public class ObjectOptions : MonoBehaviour
 
     [Header("Highlight settings")]
     public bool isPickable;
-    Material _DefaultMaterial;
+    public Material[] _DefaultMaterials;
     public Material _GlowMaterial;
     bool isHighlighted;
 
@@ -20,22 +20,40 @@ public class ObjectOptions : MonoBehaviour
 
     private void Awake() 
     {
-        _DefaultMaterial = this.GetComponent<Renderer>().material;
+        _DefaultMaterials = new Material[transform.childCount];
+        
+        int x = 0;
+        foreach (Transform item in transform)
+        {
+            _DefaultMaterials[x] = item.GetComponent<Renderer>().material;
+            x++;
+        }
         thisParent = this.transform.parent;
     }
 
     private void OnTriggerExit(Collider other) 
     {
-        RemoveHighlightObject();
+        if (other.tag == "Player")
+        {
+            RemoveHighlightObject();
+        }
     }
 
     public void HighlightObject()
     {
-        this.GetComponent<Renderer>().material = _GlowMaterial;
+        foreach (Transform item in this.transform)
+        {
+            item.GetComponent<Renderer>().material = _GlowMaterial;
+        }
     }
 
     public void RemoveHighlightObject()
     {
-        this.GetComponent<Renderer>().material = _DefaultMaterial;
+        int x = 0;
+        foreach (Transform item in transform)
+        {
+            item.GetComponent<Renderer>().material = _DefaultMaterials[x];
+            x++;
+        }
     }
 }

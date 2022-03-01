@@ -20,8 +20,8 @@ public class PickUpObject : MonoBehaviour
             if (!Input.GetMouseButton(0))
             {
                 heldObj = other.gameObject;
+                heldObj.GetComponent<ObjectOptions>().HighlightObject();
             }
-            heldObj.GetComponent<ObjectOptions>().HighlightObject();
         }
     }
 

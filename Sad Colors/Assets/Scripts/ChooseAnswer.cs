@@ -34,8 +34,8 @@ public class ChooseAnswer : MonoBehaviour
         int CurrentStop = _Interact.currentStop;
         _Interact.skipDialog = _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].redirectStart;
         _Interact.endDialog = _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].redirectEnd;
-        _Dialog.thisSkipDialog = CurrentStop + _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].redirectStart;
-        _Dialog.thisEndDialog = CurrentStop + _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].redirectEnd;
+        _Dialog.thisSkipDialog = _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].redirectStart;
+        _Dialog.thisEndDialog = _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].redirectEnd;
         _Dialog._DialogArray[CurrentStop].finalAnswer = this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text; 
         _Dialog.finishedDialog = true; 
 

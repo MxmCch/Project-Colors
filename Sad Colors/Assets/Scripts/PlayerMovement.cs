@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float x;
     public float z;
 
-    void Update()
+    void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, _GroundMask);
 
@@ -25,7 +25,16 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
- 
+
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = 20f;
+        }
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = 12f;
+        }
+
         if (!_Interact.decisionActive)
         {
             x = Input.GetAxis("Horizontal");

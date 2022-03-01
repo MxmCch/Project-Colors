@@ -4,42 +4,48 @@ using UnityEngine;
 
 public class TurnHeadReaction : MonoBehaviour
 {
-    public Coroutine turnHead;
+    Coroutine turnHead;
+    Coroutine returnHead;
+    
+    Quaternion prevRotation;
+    Vector3 prevDirection;
     bool isTriggered;
     GameObject player;
-    float rotationSpeed = 1.5f;
+    float rotationSpeed = 1.8f;
 
-    private void OnTriggerEnter(Collider other) 
+    private void Awake() 
     {
-        isTriggered = true;
-        player = other.gameObject;
-        //turnHead = StartCoroutine(turnNPC_head(other));
+        prevDirection = transform.forward;
+        prevRotation = Quaternion.LookRotation(prevDirection);
+    }
+
+    private void OnTriggerStay(Collider other) 
+    {
+        if (other.tag == "Player")
+        {
+            player = other.gameObject;
+            Vector3 toDirection = player.transform.position - transform.position;
+            Quaternion toRotation = Quaternion.LookRotation(toDirection);
+
+            transform.rotation = Quaternion.Euler(0,Quaternion.Lerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime).eulerAngles.y,0);
+        }
     }
 
     private void OnTriggerExit(Collider other) 
     {
-        isTriggered = false;
-        //StopCoroutine(turnHead);
-    }
-
-    private void FixedUpdate() 
-    {
-        if (isTriggered)
+        if (other.tag == "Player")
         {
-            Vector3 direction = player.transform.position - transform.position;
-            Quaternion toRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Euler(0,Quaternion.Lerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime).eulerAngles.y,0);
+            returnHead = StartCoroutine(turnNPC_head(prevRotation,prevDirection));
         }
-
     }
 
-    IEnumerator turnNPC_head(Quaternion startpos,Quaternion endpos)
+    IEnumerator turnNPC_head(Quaternion rotationTo, Vector3 directionTo)
     {
-        float t = 0.0f;
-        while (t <= 1.0) {
-            t += Time.deltaTime/2;
-            Quaternion rotationReturn = Quaternion.Lerp(startpos, endpos, Mathf.SmoothStep(0.0f, 1.0f, t));
-            yield return null;
+        while(transform.forward != directionTo)
+        {
+            transform.rotation = Quaternion.Euler(0,Quaternion.Lerp(transform.rotation, rotationTo, rotationSpeed * Time.deltaTime).eulerAngles.y,0);
+            
+            yield return new WaitForFixedUpdate();
         }
     }
 }

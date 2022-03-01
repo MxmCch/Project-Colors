@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd84b83d5d98bf4e8ec523dd06894a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWaypoint: {fileID: 0}
+  _CurrentWaypoint: {fileID: 0}
 --- !u!114 &4662100396301180827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   stopDistance: 1
   rotationSpeed: 120
   movementSpeed: 0
+  isTalking: 0
 --- !u!54 &4662100396301180826
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,11 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d48fd1a117a6b3428a6f0ccc4d20476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSkipDialog: 0
-  DialogArray:
-  - NPCDialogName: Pedestrian
-    TextDialog:
-    - Hello, need something?
-    - Hmm... OK
-    ChoiceObjects: []
-    finalChoice: 
+  _DialogArray: []
+  thisSkipDialog: 0
+  thisEndDialog: 0
+  finishedDialog: 0

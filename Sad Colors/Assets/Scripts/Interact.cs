@@ -174,7 +174,6 @@ public class Interact : MonoBehaviour
             }
             else
             {
-                Debug.Log(answerPanel.transform.GetChild(i).gameObject.name);
                 answerPanel.transform.GetChild(i).gameObject.SetActive(false);
             }
         }
