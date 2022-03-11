@@ -13,6 +13,8 @@ public class TurnHeadReaction : MonoBehaviour
     GameObject player;
     float rotationSpeed = 1.8f;
 
+
+
     private void Awake() 
     {
         prevDirection = transform.forward;
@@ -23,6 +25,7 @@ public class TurnHeadReaction : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            isTriggered = true;
             player = other.gameObject;
             Vector3 toDirection = player.transform.position - transform.position;
             Quaternion toRotation = Quaternion.LookRotation(toDirection);
@@ -31,21 +34,44 @@ public class TurnHeadReaction : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other) {
+        
+        if (other.tag == "Player")
+        {
+            isTriggered = false;
+            if (turnHead != null)
+            {
+                StopCoroutine(turnHead);
+            }
+        }
+    }
+
     private void OnTriggerExit(Collider other) 
     {
         if (other.tag == "Player")
         {
-            returnHead = StartCoroutine(turnNPC_head(prevRotation,prevDirection));
+            isTriggered = false;
+            returnHead = StartCoroutine(switchRoutine());
+            
         }
+    }
+
+    
+    IEnumerator switchRoutine()
+    {
+        turnHead = StartCoroutine(turnNPC_head(prevRotation,prevDirection));
+        yield return new WaitForSeconds(3);
+        yield return null;
     }
 
     IEnumerator turnNPC_head(Quaternion rotationTo, Vector3 directionTo)
     {
-        while(transform.forward != directionTo)
+        while(!isTriggered)
         {
             transform.rotation = Quaternion.Euler(0,Quaternion.Lerp(transform.rotation, rotationTo, rotationSpeed * Time.deltaTime).eulerAngles.y,0);
             
             yield return new WaitForFixedUpdate();
         }
+        yield return null;
     }
 }

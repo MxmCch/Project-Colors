@@ -12,6 +12,9 @@ public class PickUpObject : MonoBehaviour
     public Color _OldColor;
 
     public Transform oldParent;
+    
+    [SerializeField]
+    CollectAllToys _CollectAllToys;
 
 // ja nevim 
     private void OnTriggerStay(Collider other) {
@@ -36,7 +39,14 @@ public class PickUpObject : MonoBehaviour
         }
     }
 
-    private void Update() {
+    private void FixedUpdate() {
+        if(Input.GetMouseButtonDown(0))
+        {
+            if (heldObj != null && heldObj.GetComponent<ObjectOptions>().dissappear)
+            {
+                heldObj.gameObject.SetActive(false);
+            }
+        }
         if (Input.GetMouseButton(0))
         {
             if (heldObj != null)
@@ -55,6 +65,7 @@ public class PickUpObject : MonoBehaviour
             heldObj = null;
         }
     }
+
 
     private void MoveObject()
     {

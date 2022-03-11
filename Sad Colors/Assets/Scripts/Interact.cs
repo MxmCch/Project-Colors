@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Interact : MonoBehaviour
 {
@@ -77,6 +79,8 @@ public class Interact : MonoBehaviour
         }
     }
     
+    private Coroutine DisplayLineCoroutine;
+
     private void Update() 
     {
         if (Input.GetKeyDown("p"))
@@ -102,7 +106,13 @@ public class Interact : MonoBehaviour
             if (Input.GetKeyDown("f") && nextPersonDialog+skipDialog < _Dialog._DialogArray.Length && !(answerPanel.gameObject.activeSelf))
             {
                 _DialogNameText.text = _Dialog._DialogArray[nextPersonDialog+skipDialog].talkingPersonName;
-                _DialogTextText.text = _Dialog._DialogArray[nextPersonDialog+skipDialog].MonologDialog[textDialogID].speechText;
+                //_DialogTextText.text = _Dialog._DialogArray[nextPersonDialog+skipDialog].MonologDialog[textDialogID].speechText;
+                if (DisplayLineCoroutine != null)
+                {
+                    StopCoroutine(DisplayLineCoroutine);
+                }
+                DisplayLineCoroutine = StartCoroutine(DisplayLine(_Dialog._DialogArray[nextPersonDialog+skipDialog].MonologDialog[textDialogID].speechText,_DialogTextText));
+
 
                 if (nextClickDisplayFalse)
                 {
@@ -154,6 +164,17 @@ public class Interact : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private IEnumerator DisplayLine(string line, TMP_Text textChange)
+    {
+        textChange.text = "";
+
+        foreach (char letter in line.ToCharArray())
+        {
+            textChange.text += letter;
+            yield return new WaitForSeconds(0.01f);
         }
     }
 

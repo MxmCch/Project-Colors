@@ -38,6 +38,14 @@ public class ChooseAnswer : MonoBehaviour
         _Dialog.thisEndDialog = _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].redirectEnd;
         _Dialog._DialogArray[CurrentStop].finalAnswer = this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text; 
         _Dialog.finishedDialog = true; 
+        if (_Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].endDialog)
+        {
+            _Interact.nextClickDisplayFalse = true;
+        }
+        if (_Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].questGameObject != null)
+        {
+            _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].questGameObject.SetActive(true); 
+        }
 
         _EmotionClass.hope = _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].hope;
         _EmotionClass.curiosity = _Dialog._DialogArray[CurrentStop].DialogAnswer[answerIndex].curiosity;

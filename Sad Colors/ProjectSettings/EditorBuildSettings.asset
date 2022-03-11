@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 350a3a88e44166445a9d9a4177f44001
+  - enabled: 1
+    path: Assets/Scenes/Kindergarden.unity
+    guid: debfcbb51eca6944a8072483ae992593
+  - enabled: 1
+    path: Assets/Scenes/Cut Scenes/Good Ending/Good Ending.unity
+    guid: 250df1755b85a3145b581d1fd3581aae
+  - enabled: 1
+    path: Assets/Scenes/Cut Scenes/Neutral Ending/Neutral Ending.unity
+    guid: 740a9b2aa5e64fc4d9ae40920bc77f8d
   m_configObjects: {}

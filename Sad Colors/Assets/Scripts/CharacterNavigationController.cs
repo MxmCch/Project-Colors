@@ -19,7 +19,7 @@ public class CharacterNavigationController : MonoBehaviour
         movementSpeed = Random.Range(4, 8);
     }
 
-    private void Update() 
+    private void FixedUpdate() 
     {
         if (transform.position != destination)
         {

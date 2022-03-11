@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-
+/*
 
 public class WaypointManagerWindow : EditorWindow
 {
@@ -142,3 +142,4 @@ public class WaypointManagerWindow : EditorWindow
         DestroyImmediate(selectedWaypoint.gameObject);
     }
 }
+*/

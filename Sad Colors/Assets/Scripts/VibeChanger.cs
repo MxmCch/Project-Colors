@@ -14,6 +14,8 @@ public class VibeChanger : MonoBehaviour
     //2.5 full color
     //5 no color
     public float distance;
+    [SerializeField]
+    bool cutscene;
 
     public GradientAlphaKey[] _GradientAlphaKeys = new GradientAlphaKey[] {new GradientAlphaKey(0.0f, 0.6f) , new GradientAlphaKey(0.0f, 0.8f), new GradientAlphaKey(0.0f, 1.0f)};
     public GradientColorKey[] _GradientColorKeys = new GradientColorKey[] {new GradientColorKey(Color.white, 0.6f) , new GradientColorKey(Color.white, 0.8f), new GradientColorKey(Color.white, 1.0f)};
@@ -87,6 +89,10 @@ public class VibeChanger : MonoBehaviour
         {
             distance = Vector3.Distance(this.gameObject.transform.position, noPostCamera.transform.position);
             float alphaFloat = Mathf.Clamp01(4.6f-distance);
+            if (cutscene)
+            {
+                alphaFloat=1;
+            }
             GradientAlphaKey[] alphaKeysZ = new GradientAlphaKey[grad.alphaKeys.Length];
             alphaKeysZ[1] = new GradientAlphaKey(alphaFloat,0.8f);
             grad.SetKeys(grad.colorKeys,alphaKeysZ);

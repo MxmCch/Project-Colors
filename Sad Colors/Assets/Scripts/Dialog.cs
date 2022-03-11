@@ -13,6 +13,7 @@ public class Dialog : MonoBehaviour
     [Serializable]
     public class DialogText
     {
+        public int dialogID;
         static DialogText instance = new DialogText();
         [Tooltip("Name of character who is going to be talking.")]
         public string talkingPersonName;
@@ -43,6 +44,11 @@ public class Dialog : MonoBehaviour
         public int redirectStart;
         [Tooltip("Skip to this dialog.")]
         public int redirectEnd;
+        [Tooltip("Skip to this dialog.")]
+        public bool endDialog;
+
+        [Tooltip("Insert gameobject with quest script.")]
+        public GameObject questGameObject;
 
         //[SerializeField]
         //public DialogText _DialogText = new DialogText(); 

@@ -7,23 +7,36 @@ public class ShowCursor : MonoBehaviour
     public GameObject cameraMovement;
     float defaultCameraMovement;
     CameraMove _CameraMove;
+    [SerializeField]
+    PlayerMovement _PlayerMovement;
+    [SerializeField]
+    bool isTrue = true;
     
     private void Awake() 
     {
-        _CameraMove = cameraMovement.GetComponent<CameraMove>(); 
-        defaultCameraMovement = _CameraMove.mouseSensitivity;
+        if (isTrue)
+        {
+            _CameraMove = cameraMovement.GetComponent<CameraMove>(); 
+            defaultCameraMovement = _CameraMove.mouseSensitivity;
+        }
     }
 
     private void OnEnable() 
     {
-        _CameraMove.mouseSensitivity = 0;
+        if (isTrue)
+        {
+            _PlayerMovement.speed = 0;
+            _CameraMove.mouseSensitivity = 0;
+        }
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
     private void OnDisable() 
     {
-        Cursor.visible = false;
+        _PlayerMovement.speed = 6;
         _CameraMove.mouseSensitivity = defaultCameraMovement;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

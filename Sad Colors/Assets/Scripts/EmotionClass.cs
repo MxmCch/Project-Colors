@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class EmotionClass : MonoBehaviour
 {
-    //  Yellow
     public int hope;
-    //  Green
     public int curiosity;
-    //  Blue
     public int unbelief;
-    //  Red
     public int cynicism;
+    
+    public void ChangeEmotions(int ho,int cu,int un,int cy)
+    {
+        hope = ho;
+        curiosity = cu;
+        unbelief = un;
+        cynicism = cy;
+    }
 }

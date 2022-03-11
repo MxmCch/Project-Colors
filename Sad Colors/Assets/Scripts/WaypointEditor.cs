@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-
+/*
 [InitializeOnLoad()]
 public class WaypointEditor : MonoBehaviour
 {
@@ -42,3 +42,4 @@ public class WaypointEditor : MonoBehaviour
         }
     }
 }
+*/
