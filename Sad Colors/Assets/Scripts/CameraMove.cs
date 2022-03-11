@@ -12,18 +12,22 @@ public class CameraMove : MonoBehaviour
 
     void Start()
     {
+        this.transform.GetChild(0).gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    void LateUpdate()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y");
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation,-90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(xRotation,0f,0f);
+
+        Quaternion targetRotation = Quaternion.Euler(xRotation,0f,0f);
+        transform.localRotation = Quaternion.Slerp(this.transform.localRotation,targetRotation, mouseSensitivity *  Time.deltaTime);
+        
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }

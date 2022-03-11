@@ -1,58 +1,87 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Interact : MonoBehaviour
 {
     //Variables for GUI
-    public TMP_Text PressF;
-    public TMP_Text _DialogNameUI;
-    public TMP_Text _DialogTextUI;
-    public GameObject PressFPanel;
-    public GameObject DialogPanel;
-    //Variables for dialog text
-    int TextDialogID = 0;
-    public int NextPersonDialog = 0;
-    public int CurrentStop;
-    public int SkipDialog = 0;
+    public TMP_Text _DialogNameText;
+    public TMP_Text _DialogTextText;
+    public GameObject interactPanel;
+    public GameObject dialogPanel;
+    public GameObject answerPanel;
 
-    public Transform OtherTransform;
-    public bool DecisionActive = false;
-    Dialog _Dialogs;
+    public EmotionClass _EmotionClass;
+    public GameObject emotionalGraphUI;
+    bool emotionalGraphActive = false;
+    
+    //Variables for dialog text
+    int textDialogID = 0;
+    public int nextPersonDialog = 0;
+    public int currentStop;
+    public int skipDialog = 0;
+    public int endDialog;
+
+    public Transform otherTransform;
+    public bool decisionActive = false;
+    public Dialog _Dialog;
+
+    public bool nextClickDisplayFalse = false;
 
     private void Start() 
     {
-        DisplayPanel(false,false);
-        NextPersonDialog = 0;
-        TextDialogID = 0;
+        emotionalGraphUI.SetActive(false);
+        DisplayPanel(false,false,false);
+        nextPersonDialog = 0;
+        textDialogID = 0;
     }
 
-    void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other) 
     {
-        if (other.gameObject.tag == "Dialog")
+        if (other.GetComponent<Dialog>() != null)
         {
-            _Dialogs = other.gameObject.GetComponent<Dialog>();
-            OtherTransform = other.gameObject.GetComponent<Transform>();
-            SkipDialog = _Dialogs.ThisSkipDialog;
-            PressFPanel.SetActive(true);
+            _Dialog = other.gameObject.GetComponent<Dialog>();
+            _EmotionClass = other.gameObject.GetComponent<EmotionClass>();
+            otherTransform = other.gameObject.GetComponent<Transform>();
+            skipDialog = _Dialog.thisSkipDialog;
+            interactPanel.SetActive(true);
+            nextClickDisplayFalse = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other) {
+        if (other.GetComponent<CharacterNavigationController>())
+        {
+            if (Input.GetKeyDown("f"))
+            {
+                other.GetComponent<CharacterNavigationController>().isTalking = 0;
+                Vector3 thisTransform = this.gameObject.transform.position;
+                other.transform.LookAt(new Vector3(thisTransform.x,other.transform.GetChild(0).transform.position.y-0.5f,thisTransform.z));
+            }
         }
     }
     
-    void OnTriggerExit(Collider other) {
-        if (other.gameObject.tag == "Dialog")
+    private void OnTriggerExit(Collider other) {
+        if (other.GetComponent<Dialog>() != null)
         {
-            OtherTransform = null;
-            DisplayPanel(false,false);
-            TextDialogID = 0;
-            NextPersonDialog = 0;
-            SkipDialog = 0;
+            decisionActive = false;
+            otherTransform = null;
+            DisplayPanel(false,false,false);
+            textDialogID = 0;
+            nextPersonDialog = 0;
+            skipDialog = 0;
+            nextClickDisplayFalse = false;
+        }
+        if (other.GetComponent<CharacterNavigationController>())
+        {
+            other.GetComponent<CharacterNavigationController>().isTalking = 1;
         }
     }
     
-    void Update() 
+    private Coroutine DisplayLineCoroutine;
+
+    private void Update() 
     {
         if (Input.GetKeyDown("p"))
         {
@@ -65,113 +94,117 @@ public class Interact : MonoBehaviour
             //level = data.level;
             Debug.Log("All data loaded!");
         }
-        else if (Input.GetKeyDown("l"))
+        else if (Input.GetKeyDown("m"))
         {
-            
+            emotionalGraphActive = !emotionalGraphActive;
+            emotionalGraphUI.SetActive(emotionalGraphActive);
         }
 
         //Only if a panel shows up, player will be able to interact with it's surrounding
-        if (PressFPanel.activeInHierarchy == true || DialogPanel.activeInHierarchy == true)
+        if (interactPanel.activeInHierarchy == true || dialogPanel.activeInHierarchy == true)
         {
-            if (Input.GetKeyDown("f") && NextPersonDialog+SkipDialog < _Dialogs.DialogArray.Length)
+            if (Input.GetKeyDown("f") && nextPersonDialog+skipDialog < _Dialog._DialogArray.Length && !(answerPanel.gameObject.activeSelf))
             {
-                _DialogNameUI.text = _Dialogs.DialogArray[NextPersonDialog+SkipDialog].NPCDialogName;
-                _DialogTextUI.text = _Dialogs.DialogArray[NextPersonDialog+SkipDialog].TextDialog[TextDialogID];
+                _DialogNameText.text = _Dialog._DialogArray[nextPersonDialog+skipDialog].talkingPersonName;
+                //_DialogTextText.text = _Dialog._DialogArray[nextPersonDialog+skipDialog].MonologDialog[textDialogID].speechText;
+                if (DisplayLineCoroutine != null)
+                {
+                    StopCoroutine(DisplayLineCoroutine);
+                }
+                DisplayLineCoroutine = StartCoroutine(DisplayLine(_Dialog._DialogArray[nextPersonDialog+skipDialog].MonologDialog[textDialogID].speechText,_DialogTextText));
 
+
+                if (nextClickDisplayFalse)
+                {
+                    DisplayPanel(false,true,false);
+                    nextClickDisplayFalse = false;
+                    return;
+                } else {
+                    DisplayPanel(true,false,false);
+                }
                 // TextDialogID = Dialog text order in which the NPC talks
                 // NewDialog = Next persons dialog
                 // TextDialog = NPC dialog text
-                TextDialogID++;
-                if (TextDialogID == _Dialogs.DialogArray[NextPersonDialog+SkipDialog].TextDialog.Length)
+                textDialogID++;
+                if (textDialogID == _Dialog._DialogArray[nextPersonDialog+skipDialog].MonologDialog.Length)
                 {
-                    if (_Dialogs.DialogArray[NextPersonDialog+SkipDialog].ChoiceObjects.Length != 0)
+                    if (_Dialog._DialogArray[nextPersonDialog+skipDialog].DialogAnswer.Length != 0)
                     {
-                        TextDialogID = 0;
-                        CurrentStop = NextPersonDialog+SkipDialog;
-                        if (OtherTransform.childCount == 0 && DecisionActive == false)
+                        textDialogID = 0;
+                        currentStop = nextPersonDialog+skipDialog;
+                        if (decisionActive == false)
                         {
                             CreateChoices();
                         }
-                        else if (OtherTransform.childCount == 0 && DecisionActive == true)
-                        {
-                            GameObject[] oldDecisions = GameObject.FindGameObjectsWithTag("Decision");
-                            foreach (GameObject oldDecision in oldDecisions)
-                            {
-                                Destroy(oldDecision);
-                            }
-                            CreateChoices();
-                        }
-                        NextPersonDialog = 0;
+                        nextPersonDialog = 0;
                     }
                     else
                     {
-                        NextPersonDialog++;
-                        if (NextPersonDialog+SkipDialog == _Dialogs.DialogArray.Length)
+                        if (_Dialog.finishedDialog)
                         {
-                            NextPersonDialog = 0;
+                            if (nextPersonDialog + skipDialog == endDialog)
+                            {
+                                nextPersonDialog = 0;
+                                nextClickDisplayFalse = true;
+                            }else{
+                                nextPersonDialog++; 
+                            }
                         }
-                        TextDialogID = 0;
+                        else
+                        {
+                            if (nextPersonDialog+1 == _Dialog._DialogArray.Length)
+                            {
+                                nextPersonDialog = 0;
+                                nextClickDisplayFalse = true;
+                            }else{
+                                nextPersonDialog++; 
+                            }
+                        }
+                        textDialogID = 0;
                     }
                 }
-                DisplayPanel(true,false);
             }
         }
     }
 
-    //spawning choices infront of NPC 
+    private IEnumerator DisplayLine(string line, TMP_Text textChange)
+    {
+        textChange.text = "";
+
+        foreach (char letter in line.ToCharArray())
+        {
+            textChange.text += letter;
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
     private void CreateChoices()
     {
-        DecisionActive = true;
+        decisionActive = true;
+        DisplayPanel(true,false,true);
+        int x = answerPanel.transform.childCount;
+        int y = _Dialog._DialogArray[nextPersonDialog + skipDialog].DialogAnswer.Length;
 
-        //OtherTransform = ColissionEnter(other) = NPC
-        //Distance of one point in front of NPC and one point left
-        Vector3 xz = OtherTransform.position + OtherTransform.forward - OtherTransform.right;
-        
-        //Setting position of firt choice, infront of NPC to the left
-        float x = xz.x;
-        float y = OtherTransform.position.y;
-        float z = xz.z;
-
-        float totalChoices = _Dialogs.DialogArray[NextPersonDialog + SkipDialog].ChoiceObjects.Length;
-        float evenTotal = 0;
-        Vector3 newXZ = OtherTransform.forward + OtherTransform.right/evenTotal;
-
-        if (totalChoices % 2 == 1)
+        for (int i = 0; i < x; i++)
         {
-            evenTotal = (totalChoices-1)/2;
-            newXZ = OtherTransform.right/evenTotal;
-        } 
-        else if (totalChoices % 2 == 0)
-        {
-            evenTotal = totalChoices/2 + 1;
-            newXZ = OtherTransform.right/evenTotal;
-        }
-
-        //even choices, need to be moved before spawning 
-        Vector3 instantiateLocation = new Vector3(x, y, z);
-        if (totalChoices % 2 == 0)
-        {
-            instantiateLocation += newXZ/2;
-        }
-
-        foreach (GameObject decisionOBJ in _Dialogs.DialogArray[NextPersonDialog + SkipDialog].ChoiceObjects)
-        {
-            if (totalChoices % 2 == 0)
+            if (i < y)
             {
-                instantiateLocation += newXZ;
+                answerPanel.transform.GetChild(i).gameObject.SetActive(true);
+                answerPanel.transform.GetChild(i).gameObject.name = i.ToString();
+                answerPanel.transform.GetChild(i).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = _Dialog._DialogArray[nextPersonDialog + skipDialog].DialogAnswer[i].dialogAnswer;
             }
-            Instantiate(decisionOBJ, instantiateLocation, Quaternion.identity, OtherTransform);
-            if (totalChoices % 2 ==1)
+            else
             {
-                instantiateLocation += newXZ;
+                answerPanel.transform.GetChild(i).gameObject.SetActive(false);
             }
         }
     }
 
     //Displays GUI text, "Press F.." and Dialog window
-    void DisplayPanel(bool dialogPanelBool, bool PressFBool)
+    private void DisplayPanel(bool dialogPanelBool, bool PressFBool, bool answersBool)
     {
-        DialogPanel.SetActive(dialogPanelBool);
-        PressFPanel.SetActive(PressFBool);
+        dialogPanel.SetActive(dialogPanelBool);
+        interactPanel.SetActive(PressFBool);
+        answerPanel.SetActive(answersBool);
     }
 }

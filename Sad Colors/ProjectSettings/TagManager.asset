@@ -8,6 +8,8 @@ TagManager:
   - Dialog
   - Decision
   - Pickupable
+  - NPC
+  - NoPostCamera
   layers:
   - Default
   - TransparentFX
@@ -16,11 +18,11 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - NPC
   - Ground
   - Post Processing
-  - 
-  - 
+  - No Post
+  - No Post Post Processing
   - 
   - 
   - 

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ChoiceObject : MonoBehaviour
 {
-    public Color oldColor;
-    public Renderer newColor;
-    public Transform rodic;
+    public Color _OldColor;
+    public Renderer _NewColor;
+    public Transform _Parent;
     ChoiceArchive _ChoiceArchive;
     Dialog _Dialog;
     Interact _Interact;
@@ -14,21 +14,20 @@ public class ChoiceObject : MonoBehaviour
     {
         if (inside)
         {
-            rodic = this.transform.parent;
+            _Parent = this.transform.parent;
             _Dialog = this.gameObject.GetComponentInParent<Dialog>();
 
-            foreach (Transform item in rodic)
+            foreach (Transform item in _Parent)
             {
                 if (item == this.transform)
                 {
-                    int getNewDialog = _Interact.NextPersonDialog;
-                    int CurrentStop = _Interact.CurrentStop;
-                    _Interact.SkipDialog = CurrentStop+1;
-                    _Dialog.ThisSkipDialog = CurrentStop+1;
-                    Debug.Log(item.name);
-                    _Dialog.DialogArray[CurrentStop].finalChoice = item.name; 
+                    int getNewDialog = _Interact.nextPersonDialog;
+                    int CurrentStop = _Interact.currentStop;
+                    _Interact.skipDialog = CurrentStop+1;
+                    _Dialog.thisSkipDialog = CurrentStop+1;
+                    _Dialog._DialogArray[CurrentStop].finalAnswer = item.name; 
                     Destroy(item.gameObject, 2);
-                    _Interact.DecisionActive = false;
+                    _Interact.decisionActive = false;
                 }
                 else
                 {
@@ -39,16 +38,16 @@ public class ChoiceObject : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        oldColor = this.GetComponent<Renderer>().material.color;
-        newColor = this.GetComponent<Renderer>();
-        newColor.material.SetColor("_Color", Color.green);
+        _OldColor = this.GetComponent<Renderer>().material.color;
+        _NewColor = this.GetComponent<Renderer>();
+        _NewColor.material.SetColor("_Color", Color.green);
         _ChoiceArchive = other.gameObject.GetComponent<ChoiceArchive>();
         _Interact = other.gameObject.GetComponent<Interact>();
         inside = true;
     }
 
     void OnTriggerExit(Collider other) {
-        newColor.material.SetColor("_Color", oldColor);
+        _NewColor.material.SetColor("_Color", _OldColor);
         inside = false;
     }
 }

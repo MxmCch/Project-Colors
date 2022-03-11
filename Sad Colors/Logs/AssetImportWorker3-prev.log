@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.9f1 (108be757e447) revision 1084391'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 8111 MB
+OS: 'Windows 10 Home; OS build 19042.1526; Version 2009; 64bit' Language: 'en' Physical Memory: 8111 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ D:/Project-Colors/Sad Colors
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-56418
+60567
 Successfully changed project path to: D:/Project-Colors/Sad Colors
 D:/Project-Colors/Sad Colors
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 84.79 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 189.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.9f1 (108be757e447)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
@@ -35,125 +35,566 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56260
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002092 seconds.
+Registered in 0.002991 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 50.02 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 82.08 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.829 seconds
+- Completed reload, in  5.679 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002134 seconds.
+Registered in 0.001443 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.02 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.558 seconds
+- Completed reload, in  5.517 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.38 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.42 seconds
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1695 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.1 MB.
+System memory in use after: 102.1 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2163.
+Total: 2.355800 ms (FindLiveObjects: 0.191300 ms CreateObjectMapping: 0.066500 ms MarkObjects: 1.790700 ms  DeleteObjects: 0.306100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/Cut Scenes/Good Ending/drawing.jpg
+  artifactKey: Guid(d14205ca070aab64e86e76ee1555ccfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/drawing.jpg using Guid(d14205ca070aab64e86e76ee1555ccfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e9e833b65d4e72a6859c6ea0dd58f0') in 0.221969 seconds
+  Import took 0.300466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.421057 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/drawing.jpg
+  artifactKey: Guid(d14205ca070aab64e86e76ee1555ccfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/drawing.jpg using Guid(d14205ca070aab64e86e76ee1555ccfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e9e833b65d4e72a6859c6ea0dd58f0') in 0.068595 seconds
+  Import took 0.074748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.879637 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/New Animation.anim
+  artifactKey: Guid(0fe07fa2b4d3e1b4989bfefd53251319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/New Animation.anim using Guid(0fe07fa2b4d3e1b4989bfefd53251319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58918952c25a2beac4448c4f30e82a19') in 0.104823 seconds
+  Import took 0.248126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093956 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/New Animation.anim
+  artifactKey: Guid(0fe07fa2b4d3e1b4989bfefd53251319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/New Animation.anim using Guid(0fe07fa2b4d3e1b4989bfefd53251319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58918952c25a2beac4448c4f30e82a19') in 0.009251 seconds
+  Import took 0.019335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.771207 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/TimeLine.controller
+  artifactKey: Guid(9e1af56bcfcfeeb41a1e7fcc79142988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/TimeLine.controller using Guid(9e1af56bcfcfeeb41a1e7fcc79142988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cab9a4cd61e5484e496b93f32ffef56') in 0.073223 seconds
+  Import took 0.126930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.216664 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/New Animator Controller.controller
+  artifactKey: Guid(aaec547db96f3cf4b8684f8b268de952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/New Animator Controller.controller using Guid(aaec547db96f3cf4b8684f8b268de952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43c593066ab4113b870207fcbcd6fa7e') in 0.013940 seconds
+  Import took 0.038828 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001063 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.646 seconds
+Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1638 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.7 MB.
-System memory in use after: 84.7 MB.
+Unloading 1626 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.8 MB.
+System memory in use after: 98.9 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2088.
-Total: 3.420000 ms (FindLiveObjects: 0.319900 ms CreateObjectMapping: 0.087800 ms MarkObjects: 2.880700 ms  DeleteObjects: 0.129400 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2172.
+Total: 2.056600 ms (FindLiveObjects: 0.172500 ms CreateObjectMapping: 0.055600 ms MarkObjects: 1.814100 ms  DeleteObjects: 0.013300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002190 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.642 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1626 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.8 MB.
+System memory in use after: 98.9 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2175.
+Total: 5.668600 ms (FindLiveObjects: 0.400900 ms CreateObjectMapping: 0.251300 ms MarkObjects: 4.963500 ms  DeleteObjects: 0.049400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000748 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.564 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1626 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.9 MB.
+System memory in use after: 99.0 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2178.
+Total: 4.973500 ms (FindLiveObjects: 0.399500 ms CreateObjectMapping: 0.192800 ms MarkObjects: 4.323600 ms  DeleteObjects: 0.054300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001430 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.254 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1626 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.9 MB.
+System memory in use after: 99.0 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2181.
+Total: 2.861200 ms (FindLiveObjects: 0.246900 ms CreateObjectMapping: 0.109000 ms MarkObjects: 2.482600 ms  DeleteObjects: 0.021000 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Assets
-  artifactKey: Guid(bea8036a35d1de543aad47b38eba610c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets using Guid(bea8036a35d1de543aad47b38eba610c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8deb86f6706f6145411300a05f6a093b') in 0.059078 seconds
-  Import took 0.079848 seconds .
+  Time since last request: 2242.144869 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/TimeLine.playable
+  artifactKey: Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/TimeLine.playable using Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6321db7b5cf18f29f578279691d7ce2f') in 1.322629 seconds
+  Import took 1.352874 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000444 seconds.
-  path: Assets/Assets/wardrobe_kindergarden.blend
-  artifactKey: Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/wardrobe_kindergarden.blend using Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c7ecd97cbafa66c01aca43ba4123149') in 0.069694 seconds
-  Import took 0.098960 seconds .
+  Time since last request: 21.296982 seconds.
+  path: Assets/Assets/Animations/Sitting.fbx
+  artifactKey: Guid(2b2be36811377a74ab124dfa2a395e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Animations/Sitting.fbx using Guid(2b2be36811377a74ab124dfa2a395e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db14976a3fa1da82a4f76e16fba8c78') in 0.054497 seconds
+  Import took 0.097947 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000751 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.967 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.9 MB.
+System memory in use after: 99.0 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2185.
+Total: 2.966900 ms (FindLiveObjects: 0.166900 ms CreateObjectMapping: 0.048800 ms MarkObjects: 2.721400 ms  DeleteObjects: 0.028400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000715 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.276 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.9 MB.
+System memory in use after: 99.0 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2188.
+Total: 2.862100 ms (FindLiveObjects: 0.240800 ms CreateObjectMapping: 0.084400 ms MarkObjects: 2.517500 ms  DeleteObjects: 0.017900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 42.652620 seconds.
-  path: Assets/Assets/wardrobe_kindergarden.fbx
-  artifactKey: Guid(226d435c21d40104fa369778ed3e8623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/wardrobe_kindergarden.fbx using Guid(226d435c21d40104fa369778ed3e8623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66dfe00568a8252a141ca74366466f05') in 0.516823 seconds
-  Import took 0.575934 seconds .
+  Time since last request: 1110.578853 seconds.
+  path: Assets/Prefabs/Idle Person.prefab
+  artifactKey: Guid(dd823d5b45fce9145add47186cacf7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Idle Person.prefab using Guid(dd823d5b45fce9145add47186cacf7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Idle Animation': Transition 'AnyState -> Idle' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '460320ae5e73081a9bee4fd22ace9dc2') in 1.600096 seconds
+  Import took 1.664736 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 59.661097 seconds.
-  path: Assets/Assets/wardrobe_kindergarden.fbx
-  artifactKey: Guid(226d435c21d40104fa369778ed3e8623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/wardrobe_kindergarden.fbx using Guid(226d435c21d40104fa369778ed3e8623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68afc4d57701bdabfa19664c36c4a81c') in 0.044745 seconds
-  Import took 0.051831 seconds .
+  Time since last request: 0.000334 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(67f28e97a354e4444b2fea37c35a9279) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(67f28e97a354e4444b2fea37c35a9279) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73c6f2157904ee07755fed3a21135f7c') in 1.500405 seconds
+  Import took 1.525325 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.926630 seconds.
-  path: Assets/Assets/wardrobe_kindergarden.blend1
-  artifactKey: Guid(2c8a14c0ca9c0794cbf47807431ba00e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/wardrobe_kindergarden.blend1 using Guid(2c8a14c0ca9c0794cbf47807431ba00e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '859dbf5d3e6c5682498a4b245685ba9d') in 0.007039 seconds
-  Import took 0.140437 seconds .
+  Time since last request: 0.000350 seconds.
+  path: Assets/Prefabs/UI.prefab
+  artifactKey: Guid(583303c5a5dff22458a1bf20d9a1dc38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI.prefab using Guid(583303c5a5dff22458a1bf20d9a1dc38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '456062b2bd4c3d6d45c2409194d79f34') in 0.128243 seconds
+  Import took 0.173797 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.837105 seconds.
-  path: Assets/Assets/wardrobe_kindergarden.blend
-  artifactKey: Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/wardrobe_kindergarden.blend using Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd745618b42694fe12a05ef6fb8624ed') in 0.003680 seconds
-  Import took 0.072838 seconds .
+  Time since last request: 70.283628 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending 1
+  artifactKey: Guid(4d14d4000cfe8de45ba52a137ee7043a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending 1 using Guid(4d14d4000cfe8de45ba52a137ee7043a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f1810973682c1f63b77e7a36b534183') in 0.011237 seconds
+  Import took 0.036283 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 25.056210 seconds.
-  path: Assets/Assets/wardrobe_kindergarden.blend
-  artifactKey: Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/wardrobe_kindergarden.blend using Guid(9b2c59475d6defe4f99384c569bd849c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e00d5924067c19bc9f4aa9307f4a76') in 0.002612 seconds
-  Import took 0.106674 seconds .
+  Time since last request: 7.033006 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending
+  artifactKey: Guid(4d14d4000cfe8de45ba52a137ee7043a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending using Guid(4d14d4000cfe8de45ba52a137ee7043a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c487e92fa50bb0710e58354763f2991') in 0.010309 seconds
+  Import took 0.047990 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 333.382489 seconds.
-  path: Assets/Shaders
-  artifactKey: Guid(a8668043cd33a5548a2c1975f3699618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders using Guid(a8668043cd33a5548a2c1975f3699618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de5af7ea305467444c63c5b314499e6e') in 0.016006 seconds
-  Import took 0.029161 seconds .
+  Time since last request: 0.314389 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/drawing.jpg
+  artifactKey: Guid(47c6630a752d4ce478feca9da6d64646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/drawing.jpg using Guid(47c6630a752d4ce478feca9da6d64646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa42de83658d317a9cc86aed01fdc233') in 0.322802 seconds
+  Import took 0.361031 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 52.687723 seconds.
-  path: Assets/Shaders/Outline.shader
-  artifactKey: Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/Outline.shader using Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '320751ab8a3f240d53dfd03f594bf3e1') in 0.018026 seconds
-  Import took 0.033526 seconds .
+  Time since last request: 0.000347 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/TimeLine.playable
+  artifactKey: Guid(ab36683de256c074897b52b4571375c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/TimeLine.playable using Guid(ab36683de256c074897b52b4571375c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cf885495e7af548ba57e4dc7b80957f') in 0.619102 seconds
+  Import took 0.707909 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.004986 seconds.
-  path: Assets/Shaders/Outline.shader
-  artifactKey: Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/Outline.shader using Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '320751ab8a3f240d53dfd03f594bf3e1') in 0.002789 seconds
-  Import took 0.029946 seconds .
+  Time since last request: 0.115344 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/Good Ending.unity
+  artifactKey: Guid(740a9b2aa5e64fc4d9ae40920bc77f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/Good Ending.unity using Guid(740a9b2aa5e64fc4d9ae40920bc77f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8687860387ea0e9349d36eba9c984095') in 0.012706 seconds
+  Import took 0.046636 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 64.742885 seconds.
-  path: Assets/Shaders/Outline.shader
-  artifactKey: Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/Outline.shader using Guid(1f10a26f98e78c6429d9afbd2c9f042b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54fbac6eb62c3cff16e30209d56e316a') in 0.013002 seconds
-  Import took 0.046788 seconds .
+  Time since last request: 3.970992 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/Neutral Ending.unity
+  artifactKey: Guid(740a9b2aa5e64fc4d9ae40920bc77f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/Neutral Ending.unity using Guid(740a9b2aa5e64fc4d9ae40920bc77f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d28899d93881bc76a1ba25d553067cc') in 0.011315 seconds
+  Import took 0.053655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.007729 seconds.
+  path: Assets/Assets/Animations/Sitting Idle.fbx
+  artifactKey: Guid(2e5a88a555b35fc4f889a2563f2fdabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Animations/Sitting Idle.fbx using Guid(2e5a88a555b35fc4f889a2563f2fdabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad667186b6e3704ac1e50f6f8ab0e025') in 0.717894 seconds
+  Import took 0.750026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.097426 seconds.
+  path: Assets/Assets/Animations/Sitting Idle.fbx
+  artifactKey: Guid(2e5a88a555b35fc4f889a2563f2fdabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Animations/Sitting Idle.fbx using Guid(2e5a88a555b35fc4f889a2563f2fdabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c2a80cf347d94467436a78d5960df89') in 0.095643 seconds
+  Import took 0.156260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/Assets/Animations/Sitting.fbx
+  artifactKey: Guid(2b2be36811377a74ab124dfa2a395e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Animations/Sitting.fbx using Guid(2b2be36811377a74ab124dfa2a395e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '617fc872d48dc992cb8c95c45ec9dcec') in 0.043106 seconds
+  Import took 0.108432 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000716 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.978 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.2 MB.
+System memory in use after: 113.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2234.
+Total: 2.258500 ms (FindLiveObjects: 0.250100 ms CreateObjectMapping: 0.061900 ms MarkObjects: 1.834800 ms  DeleteObjects: 0.109200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.152978 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/Good Ending.unity
+  artifactKey: Guid(250df1755b85a3145b581d1fd3581aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/Good Ending.unity using Guid(250df1755b85a3145b581d1fd3581aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1666064170c9de4e8d6e574a3649f8a') in 0.058460 seconds
+  Import took 0.118049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/TimeLine.playable
+  artifactKey: Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/TimeLine.playable using Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea0216cf1d6fd38a86f502a5c29423b1') in 0.011945 seconds
+  Import took 0.048916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.681057 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/Neutral Ending.unity
+  artifactKey: Guid(740a9b2aa5e64fc4d9ae40920bc77f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/Neutral Ending.unity using Guid(740a9b2aa5e64fc4d9ae40920bc77f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a428dd630594180ed9b40ee769bf49d') in 0.004671 seconds
+  Import took 0.041169 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000688 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.023 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.3 MB.
+System memory in use after: 113.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2237.
+Total: 2.196100 ms (FindLiveObjects: 0.189000 ms CreateObjectMapping: 0.082000 ms MarkObjects: 1.909700 ms  DeleteObjects: 0.014200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.895812 seconds.
+  path: Assets/Assets/Animations/Walk Animation 1.controller
+  artifactKey: Guid(f9275037416178e45a8b54cabb450950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Animations/Walk Animation 1.controller using Guid(f9275037416178e45a8b54cabb450950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '160794ae9b61513c4524dc07c09c391a') in 0.045274 seconds
+  Import took 0.067878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.038816 seconds.
+  path: Assets/Assets/Animations/Sitting Animatin.controller
+  artifactKey: Guid(f9275037416178e45a8b54cabb450950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Animations/Sitting Animatin.controller using Guid(f9275037416178e45a8b54cabb450950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdedeac71800046d171744cda5701d2b') in 0.012164 seconds
+  Import took 0.058979 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001329 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.001 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.3 MB.
+System memory in use after: 113.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2240.
+Total: 2.304900 ms (FindLiveObjects: 0.179900 ms CreateObjectMapping: 0.059200 ms MarkObjects: 2.033800 ms  DeleteObjects: 0.031100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 262.707041 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/childs-drawing-happy-child-house-and-garden-CMF00881.jpg
+  artifactKey: Guid(764ce152f839d97428f0548b1011e066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/childs-drawing-happy-child-house-and-garden-CMF00881.jpg using Guid(764ce152f839d97428f0548b1011e066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c99478e683f5d97ef11c1df6521e0fc') in 0.191447 seconds
+  Import took 0.209472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.666176 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/childs-drawing-happy-child-house-and-garden-CMF00881.jpg
+  artifactKey: Guid(764ce152f839d97428f0548b1011e066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/childs-drawing-happy-child-house-and-garden-CMF00881.jpg using Guid(764ce152f839d97428f0548b1011e066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0612b69a5eb8a38779fc38a9ef65b44d') in 0.282360 seconds
+  Import took 0.414738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 238.847657 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/TimeLine.playable
+  artifactKey: Guid(ab36683de256c074897b52b4571375c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/TimeLine.playable using Guid(ab36683de256c074897b52b4571375c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51a8b0eb6458972498763b25d6b2fc1b') in 0.014056 seconds
+  Import took 0.064734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.212322 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/Neutral Ending.unity
+  artifactKey: Guid(740a9b2aa5e64fc4d9ae40920bc77f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/Neutral Ending.unity using Guid(740a9b2aa5e64fc4d9ae40920bc77f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3486113a9ee6daf98684b952b6e333fd') in 0.005175 seconds
+  Import took 0.070793 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000735 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.135 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.2 MB.
+System memory in use after: 113.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2246.
+Total: 2.856300 ms (FindLiveObjects: 0.235400 ms CreateObjectMapping: 0.084500 ms MarkObjects: 2.519800 ms  DeleteObjects: 0.015400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 275.897216 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/TimeLine.playable
+  artifactKey: Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/TimeLine.playable using Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95aa6e7c41694b9cde5101af7503f34b') in 0.047676 seconds
+  Import took 0.081519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.818869 seconds.
+  path: Assets/Scenes/Cut Scenes/Neutral Ending/TimeLine.playable
+  artifactKey: Guid(ab36683de256c074897b52b4571375c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Neutral Ending/TimeLine.playable using Guid(ab36683de256c074897b52b4571375c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14d4c5a1de1d515cec9936d577c294c3') in 0.010389 seconds
+  Import took 0.028522 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000855 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.005 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.2 MB.
+System memory in use after: 113.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2249.
+Total: 2.249100 ms (FindLiveObjects: 0.232900 ms CreateObjectMapping: 0.056800 ms MarkObjects: 1.914100 ms  DeleteObjects: 0.044200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 130.261660 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/123.playable
+  artifactKey: Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/123.playable using Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3d4291ab6d0d14992b1ebf2cc825ffc') in 0.076800 seconds
+  Import took 0.127349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.837961 seconds.
+  path: Assets/Scenes/Cut Scenes/Good Ending/123.playable
+  artifactKey: Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cut Scenes/Good Ending/123.playable using Guid(d677c56d044946f498c90911214adc20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a8d878902f8ed0a42dce05ee19f27aa') in 0.007371 seconds
+  Import took 0.042961 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000821 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.571 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.3 MB.
+System memory in use after: 113.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2252.
+Total: 2.928600 ms (FindLiveObjects: 0.284200 ms CreateObjectMapping: 0.113800 ms MarkObjects: 2.473800 ms  DeleteObjects: 0.054700 ms)
 
